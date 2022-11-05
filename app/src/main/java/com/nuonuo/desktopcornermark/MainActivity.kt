@@ -20,8 +20,8 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<View>(R.id.btn_send).setOnClickListener {
 
+            //显示数量
             val showNumber = 99;
-
             //小米11以下处理
             val intent = Intent(this, MainActivity::class.java);
             val pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
@@ -40,8 +40,6 @@ class MainActivity : AppCompatActivity() {
                 .setChannelId("xiaomi")
                 .setNumber(showNumber)
                 .setBadgeIconType(NotificationCompat.BADGE_ICON_SMALL).build()
-
-
             //小米12处理
             val xiaomiNotification12 = Notification.Builder(this@MainActivity, "xiaomi")
                 .setSmallIcon(androidx.loader.R.drawable.notification_bg)
@@ -50,8 +48,11 @@ class MainActivity : AppCompatActivity() {
                 .setNumber(showNumber)
                 .build()
 
+            //显示
             DesktopCornerMark(this).params {
+                //小米12之前处理
                 xiaomiNotification(notification)
+                //小米12以后处理
                 xiaomiNotification12(xiaomiNotification12)
             }.showDeskMark(showNumber)
         }

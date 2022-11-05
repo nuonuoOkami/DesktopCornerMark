@@ -59,6 +59,7 @@ class DesktopCornerMark(private var context: Context, notice: Function<Int>? = n
     private var xiaomiNotificationId = 999222
 
     private var xiaomiNotification: Notification? = null
+    private var xiaomiNotification12: Notification? = null
 
 
     /**
@@ -126,8 +127,8 @@ class DesktopCornerMark(private var context: Context, notice: Function<Int>? = n
                         notificationManager.notify(xiaomiNotificationId, xiaomiNotification)
                     }
                 } else {
-                    if (xiaomiNotification != null) {
-                        notificationManager.notify(xiaomiNotificationId, xiaomiNotification)
+                    if (xiaomiNotification12 != null) {
+                        notificationManager.notify(xiaomiNotificationId, xiaomiNotification12)
                     }
 
                 }
@@ -325,7 +326,7 @@ class DesktopCornerMark(private var context: Context, notice: Function<Int>? = n
     }
 
     fun xiaomiNotification12(notification: Notification?) {
-        xiaomiNotification = notification
+        xiaomiNotification12 = notification
     }
 
 
