@@ -4,10 +4,10 @@
 
 ### 写在前面
 
-    聊胜于无的功能需求实现。
+    聊胜于无的功能需求实现。（反正通知和桌面角标不开就不显示）
     已经线上验证，安全无忧！
 
-### 依赖库
+### 代码使用
 
 ### 支持
 
@@ -22,7 +22,7 @@
 
 ### 依赖使用
 
-    implementation ''
+    implementation 'io.github.nuonuoOkami:DesktopCornerMark:1.0.0'
 
 ### 使用方式
 
