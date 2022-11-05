@@ -8,7 +8,7 @@
     已经线上验证，安全无忧！
 
 ### 代码使用
-    //显示数量
+    //显示数量（因为小米的桌面角标需要发一个通知才行，so你懂得）
         val showNumber = 99;
     //小米11以下处理
     val intent = Intent(this, MainActivity::class.java);
